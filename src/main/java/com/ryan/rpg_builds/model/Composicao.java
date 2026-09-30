@@ -14,10 +14,9 @@ public class Composicao {
     private Long id;
 
     private String nome = "Equipe principal";
-    private String sacerdote = "Helar";
-    private String arqueiro = "Hox";
-    private String feiticeiro = "Ignis";
-    private String cavaleiro = "Valen";
+    private String heroi1;
+    private String heroi2;
+    private String heroi3;
 
 
 }
