@@ -13,9 +13,11 @@ public class Composicao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nomeEstrategia;
-    private String faseAlvo;
-    private String notas;
+    private String nome = "Equipe principal";
+    private String sacerdote = "Helar";
+    private String arqueiro = "Hox";
+    private String feiticeiro = "Ignis";
+    private String cavaleiro = "Valen";
 
 
 }
