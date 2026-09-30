@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  banco-rpg:
+    image: postgres:15
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_DB=rpg_db
+      - POSTGRES_USER=ryan
+      - POSTGRES_PASSWORD=123456
