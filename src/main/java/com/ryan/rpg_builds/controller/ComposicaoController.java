@@ -2,6 +2,7 @@ package com.ryan.rpg_builds.controller;
 
 import com.ryan.rpg_builds.model.Composicao;
 import com.ryan.rpg_builds.repository.ComposicaoRepository;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,13 +31,13 @@ public class ComposicaoController {
     }
 
     @PutMapping("/{id}")
-    public Composicao atualizar(@PathVariable Long id, @RequestBody Composicao composicao){
+    public Composicao atualizar(@PathVariable Long id, @Valid @RequestBody Composicao composicao){
         composicao.setId(id);
         return repository.save(composicao);
     }
 
     @PostMapping
-    public Composicao salvar(@RequestBody Composicao composicao) {
+    public Composicao salvar(@Valid @RequestBody Composicao composicao) {
         return repository.save(composicao);
     }
 }
