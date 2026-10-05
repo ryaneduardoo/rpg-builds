@@ -29,6 +29,12 @@ public class ComposicaoController {
         repository.deleteById(id);
     }
 
+    @PutMapping("/{id}")
+    public Composicao atualizar(@PathVariable Long id, @RequestBody Composicao composicao){
+        composicao.setId(id);
+        return repository.save(composicao);
+    }
+
     @PostMapping
     public Composicao salvar(@RequestBody Composicao composicao) {
         return repository.save(composicao);
